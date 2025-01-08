@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo "== deploy s3 bucket via CloudFormation"
+
+STACK_NAME="cfn-s3-simple"
+
+aws cloudformation deploy \
+--template-file template.yaml \
+--stack-name $STACK_NAME
